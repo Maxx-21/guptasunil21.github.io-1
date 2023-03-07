@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #eff4fd;
+    position: relative;
+}
+
+
+
+
+.logo{
+    width: 100px;
+    cursor: pointer;
+    
+}
+
+ul{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    
+}
+ul li {
+    list-style: none;
+   
+}
+ul li a{
+    padding: 8px;
+    text-decoration: none;
+    position:relative;
+    margin: 0 20px;
+    color: black;
+}
+ul li a::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.3s;
+    top:0%;
+    left: 0%;
+    border-top: 2px solid rgb(240, 210, 14);  
+    border-left: 2px solid rgb(240, 210, 14); 
+}
+ul li a::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.5s;
+    /*transform-origin: left;*/
+    bottom: 0%;
+    right: 0%;
+    border-bottom: 2px solid rgb(240, 210, 14);  
+    border-right: 2px solid rgb(240, 210, 14); 
+}
+ul li a:hover:before,
+ul li a:hover:after{
+    width: 10%;
+    height: 10%;
+   /* transform: rotate(360deg);*/
+    transform: scale(1.8);
+    filter: grayscale(1.2);
+}
+
+.detel{
+    margin-left: 8%;
+    margin-top: 15%;
+}
+
+.detel h1{
+    font-size: 24px;
+    color: #212121;
+    margin-bottom: 20px;
+}
+
+span{
+    color: orange;
+    
+}
+
+.detel p{
+    color: #555;
+    line-height: 22px;
+}
+
+.detel a{
+    background: #212121;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+
+.images{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.images img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.images:hover .shape{
+    bottom: 40px;
+}
+
+.images:hover .me{
+    left: 45%;
+}
+
+.social{
+    margin-left: 8%;
+    margin-top: 100px;
+}
+
+.social a{
+    font-size: 30px;
+    color: #212121;
+    margin-right: 20px;
+}
+
+.social a:hover{
+    color: orange;
+}
